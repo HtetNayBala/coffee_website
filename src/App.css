@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+li .active{
+    border-bottom: 2px solid #e4a650;
+    padding-bottom: 5px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav{
+    font-size: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.para{
+    font-size: 15px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.shop-name{
+    font-family: serif;
+    font-size: 38px;
 }
-
-.App-link {
-  color: #61dafb;
+.second-title{
+    font-size: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-shop-name{
+    font-size: 70px;
+    font-family: serif;
+}
+.gray{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.glider-next{
+    right:50px !important;
+}
+.glider-prev{
+    left:50px !important;
+}
+.gallery-box{
+    column-count: 3;
+    column-width: 300px;
+    column-fill: balance;
+}
+.glider-dots{
+    margin-top: 30px;
+}
+.bts{
+    clip-path: polygon(6% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.call-us::before{
+    border-width: 1px 1px 0 0;
+    right: 0;
+    top: 0;
+}
+.call-us::after{
+    border-width: 0 0 1px 1px;
+    bottom: 0;
+    left: 0;
+}
+.call-us::after,.call-us::before{
+    border-color: #f5a637;
+    border-style: solid;
+    content: "";
+    height: 2rem;
+    position: absolute;
+    width: 2rem;
 }

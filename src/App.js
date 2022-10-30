@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import 'glider-js/glider.min.css';
+import Touche from "./MainComponents/Touche";
+import AboutUs from "./MainComponents/AboutUs";
+import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
+import Menu from './MainComponents/Menu'
+import Reservation from "./MainComponents/Reservation";
+import NewsAndEvents from "./MainComponents/NewsAndEvents";
+import Gallery from "./MainComponents/Gallery";
+import Contact from "./MainComponents/Contact";
+import Nav from "./Component/Nav";
 
-function App() {
+function App(props) {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Router>
+              <Nav/>
+              <Routes>
+                  <Route path='/' element={<Touche/>}>Touche</Route>
+                  <Route path='/about' element={<AboutUs/>}>About</Route>
+                  <Route path='/menu' element={<Menu/>}>Menu</Route>
+                  <Route path='/reserve' element={<Reservation/>}>Reservation</Route>
+                  <Route path='/news' element={<NewsAndEvents/>}>News And Events</Route>
+                  <Route path='/gallery' element={<Gallery/>}>Gallery</Route>
+                  <Route path='/contact' element={<Contact/>}>Contact</Route>
+              </Routes>
+          </Router>
   );
-}
+};
 
 export default App;
